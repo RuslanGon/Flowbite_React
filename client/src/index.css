@@ -2,17 +2,27 @@
 @import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
+@source "../node_modules/flowbite-datepicker";
+
+@import 'flowbite';
+@import 'flowbite-datepicker';
 
 html {
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  body {
-    background-color: #ffffff; /* Светлый фон по умолчанию */
-    color: #000000; /* Темный текст по умолчанию */
-  }
-  
-  .dark body {
-    background-color: #1a202c; /* Темный фон при активной тёмной теме */
-    color: #ffffff; /* Белый текст при тёмной теме */
-  }
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Стиль для светлой темы */
+body {
+  background-color: #ffffff; /* Светлый фон по умолчанию */
+  color: #000000; /* Темный текст по умолчанию */
+}
+
+/* Стиль для темной темы */
+html.dark {
+  background-color: #1a202c; /* Темный фон */
+}
+
+html.dark body {
+  background-color: #1a202c; /* Темный фон при темной теме */
+  color: #ffffff; /* Белый текст при темной теме */
+}
