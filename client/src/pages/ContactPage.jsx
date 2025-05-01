@@ -1,22 +1,19 @@
-import React, { useEffect } from 'react';
-import { Datepicker } from 'flowbite-datepicker';
+import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const ContactPage = () => {
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const datepickerElement = document.getElementById('datepicker-container');
-      if (datepickerElement && !datepickerElement.querySelector('.datepicker')) {
-        new Datepicker(datepickerElement, {
-          inline: true,
-        });
-      }
-    }
-  }, []);
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   return (
     <div className="flex items-center justify-center min-h-screen">
-      {/* Контейнер для календаря */}
-      <div id="datepicker-container" className="relative max-w-sm"></div>
+      <div className="bg-white p-6 rounded shadow-md">
+        <DatePicker
+          selected={selectedDate}
+          onChange={(date) => setSelectedDate(date)}
+          inline
+        />
+      </div>
     </div>
   );
 };
