@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import foto from '../assets/foto.jpg'
-import Button from './Button.jsx';
+
+import DarkModeDemo from './DarkModeDemo.jsx';
 
 const Navbar = () => {
   return (
@@ -13,7 +14,7 @@ const Navbar = () => {
         </Link>
         <div className="flex gap-8 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <img className="w-8 h-8 rounded-full" src={foto} alt="user photo" />
-          <Button />
+          <DarkModeDemo />
         </div>
         <div
           className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"

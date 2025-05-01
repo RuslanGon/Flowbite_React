@@ -2,3 +2,17 @@
 @import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
+
+html {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body {
+    background-color: #ffffff; /* Светлый фон по умолчанию */
+    color: #000000; /* Темный текст по умолчанию */
+  }
+  
+  .dark body {
+    background-color: #1a202c; /* Темный фон при активной тёмной теме */
+    color: #ffffff; /* Белый текст при тёмной теме */
+  }
