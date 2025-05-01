@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import foto from '../assets/foto.jpg'
+import Button from './Button.jsx';
 
 const Navbar = () => {
   return (
@@ -9,8 +11,9 @@ const Navbar = () => {
           <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
         </Link>
-        <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <img className="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="user photo" />
+        <div className="flex gap-8 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <img className="w-8 h-8 rounded-full" src={foto} alt="user photo" />
+          <Button />
         </div>
         <div
           className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
@@ -40,14 +43,6 @@ const Navbar = () => {
                 className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Services
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/pricing"
-                className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Pricing
               </Link>
             </li>
             <li>
